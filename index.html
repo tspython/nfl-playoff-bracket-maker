@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="/src/styles.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NFL Playoff Bracket</title>
+  <script type="module" src="/src/main.ts" defer></script>
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/URI.js/1.19.1/URI.min.js"></script>
+
+  <style>
+    .afc_logo {
+      background-image: url('/src/assets/nfl/afc.gif');
+    }
+
+    .nfc_logo {
+      background-image: url('/src/assets/nfl/nfc.gif');
+    }
+
+    .team_logo.ravens {
+      background-image: url("/src/assets/nfl/ravens.svg");
+    }
+
+    .team_logo.chiefs {
+      background-image: url("/src/assets/nfl/chiefs.svg");
+    }
+
+    .team_logo.patriots {
+      background-image: url("/src/assets/nfl/patriots.svg");
+    }
+
+    .team_logo.dolphins {
+      background-image: url("/src/assets/nfl/dolphins.svg");
+    }
+
+    .team_logo.chargers {
+      background-image: url("/src/assets/nfl/chargers.svg");
+    }
+
+    .team_logo.jaguars {
+      background-image: url("/src/assets/nfl/jaguars.svg");
+    }
+
+    .team_logo.texans {
+      background-image: url("/src/assets/nfl/texans.svg");
+    }
+
+    .team_logo.bills {
+      background-image: url("/src/assets/nfl/bills.svg");
+    }
+
+    .team_logo.titans {
+      background-image: url("/src/assets/nfl/titans.svg");
+    }
+
+    .team_logo.fortyniners {
+      background-image: url("/src/assets/nfl/fortyniners.svg");
+    }
+
+    .team_logo.giants {
+      background-image: url("/src/assets/nfl/giants.svg");
+    }
+
+    .team_logo.packers {
+      background-image: url("/src/assets/nfl/packers.svg");
+    }
+
+    .team_logo.saints {
+      background-image: url("/src/assets/nfl/saints.svg");
+    }
+
+    .team_logo.seahawks {
+      background-image: url("/src/assets/nfl/seahawks.svg");
+    }
+
+    .team_logo.vikings {
+      background-image: url("/src/assets/nfl/vikings.svg");
+    }
+
+    .team_logo.eagles {
+      background-image: url("/src/assets/nfl/eagles.svg");
+    }
+
+    .team_logo.colts {
+      background-image: url("/src/assets/nfl/colts.svg");
+    }
+
+    .team_logo.browns {
+      background-image: url("/src/assets/nfl/browns.svg");
+    }
+
+    .team_logo.steelers {
+      background-image: url("/src/assets/nfl/steelers.svg");
+    }
+
+    .team_logo.bears {
+      background-image: url("/src/assets/nfl/bears.svg");
+    }
+
+    .team_logo.rams {
+      background-image: url("/src/assets/nfl/rams.svg");
+    }
+
+    .team_logo.buccaneers {
+      background-image: url("/src/assets/nfl/buccaneers.svg");
+    }
+
+    .team_logo.football {
+      background-image: url("/src/assets/nfl/football.svg");
+    }
+
+    .team_logo.raiders {
+      background-image: url("/src/assets/nfl/raiders.svg");
+    }
+
+    .team_logo.bengals {
+      background-image: url("/src/assets/nfl/bengals.svg");
+    }
+
+    .team_logo.cowboys {
+      background-image: url("/src/assets/nfl/cowboys.svg");
+    }
+
+    .team_logo.cardinals {
+      background-image: url("/src/assets/nfl/cardinals.svg");
+    }
+
+    .team_logo.lions {
+      background-image: url("/src/assets/nfl/lions.svg");
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div id="top" class="top">
+      <div class="afc_logo"></div>
+      <div class="champ">
+        <span class="champ_label">Champion</span>
+        <div class="team">
+          <div class="team_logo">&nbsp;</div>
+        </div>
+      </div>
+      <div class="nfc_logo"></div>
+    </div>
+    <div id="bracket" class="bracket">
+      <div id="afc_wc" class="round wildcard">
+        <div class="label">Wildcard</div>
+        <div class="game"></div>
+        <div class="game"></div>
+        <div class="game"></div>
+      </div>
+      <div id="afc_div" class="round divisional">
+        <div class="label">Divisional</div>
+        <div class="game"></div>
+        <div class="game"></div>
+      </div>
+      <div id="afc_conf" class="round conference">
+        <div class="label">Conference</div>
+        <div class="game"></div>
+      </div>
+      <div id="sb_game" class="round superbowl">
+        <div class="label">Super Bowl</div>
+        <div class="game"></div>
+      </div>
+      <div id="nfc_conf" class="round conference">
+        <div class="label">Conference</div>
+        <div class="game"></div>
+      </div>
+      <div id="nfc_div" class="round divisional">
+        <div class="label">Divisional</div>
+        <div class="game"></div>
+        <div class="game"></div>
+      </div>
+      <div id="nfc_wc" class="round wildcard">
+        <div class="label">Wildcard</div>
+        <div class="game"></div>
+        <div class="game"></div>
+        <div class="game"></div>
+      </div>
+    </div>
+
+    <div id="reset">
+      <button id="reset">reset selections</button>
+    </div>
+  </div>
+</body>
+
+</html>
